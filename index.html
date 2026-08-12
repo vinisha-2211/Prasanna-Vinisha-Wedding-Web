@@ -192,7 +192,15 @@ body {
 </head>
 
 <body>
+<audio id="weddingMusic" loop>
+  <source src="Prasanna_Vinisha_BGM_00-23_to_00-40.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+document.addEventListener("click", function () {
+  document.getElementById("weddingMusic").play();
+}, { once: true });
+</script>
 <section class="hero">
   <div class="card">
 

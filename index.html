@@ -175,7 +175,7 @@
     .music-btn,
     .gold-btn {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px 5px 0;
       padding: 12px 24px;
       border: 1px solid #c9a46c;
       border-radius: 30px;
@@ -222,7 +222,7 @@
 <body>
 
   <!-- Wedding Music -->
-  <audio id="weddingMusic" loop>
+  <audio id="weddingMusic">
     <source src="Prasanna_Vinisha_BGM_00-23_to_00-40.mp3" type="audio/mpeg">
   </audio>
 
@@ -285,9 +285,13 @@
 
       <div class="flower">✦</div>
 
-      <!-- Music Button -->
+      <!-- Music Buttons -->
       <button onclick="playWeddingMusic()" class="music-btn">
         ▶ Play Kalyana Melam
+      </button>
+
+      <button onclick="stopWeddingMusic()" class="music-btn">
+        ⏹ Stop
       </button>
 
       <div class="footer">
@@ -306,13 +310,16 @@
     function playWeddingMusic() {
       const music = document.getElementById("weddingMusic");
 
-      music.play()
-        .then(() => {
-          console.log("Wedding music playing");
-        })
-        .catch((error) => {
-          console.log("Music could not play:", error);
-        });
+      music.play().catch((error) => {
+        console.log("Music could not play:", error);
+      });
+    }
+
+    function stopWeddingMusic() {
+      const music = document.getElementById("weddingMusic");
+
+      music.pause();
+      music.currentTime = 0;
     }
   </script>
 

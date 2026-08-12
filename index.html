@@ -1,124 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#8f2949">
-  <title>Prasanna & Vinisha | Wedding Invitation</title>
-  <meta name="description" content="A beautiful wedding invitation for Prasanna and Vinisha — September 13, 2026.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prasanna & Vinisha | Wedding Invitation</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #140b08;
+  color: #f8ead2;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background:
+    radial-gradient(circle at top, rgba(181,132,61,.25), transparent 35%),
+    linear-gradient(135deg, #120806, #2b130d 50%, #100705);
+}
+
+.card {
+  width: 100%;
+  max-width: 850px;
+  min-height: 90vh;
+  padding: 55px 35px;
+  border: 1px solid #c9a15b;
+  position: relative;
+  background:
+    linear-gradient(rgba(25,10,7,.92), rgba(25,10,7,.96));
+  box-shadow: 0 0 45px rgba(201,161,91,.22);
+}
+
+.card::before,
+.card::after {
+  content: "✦";
+  position: absolute;
+  color: #d5ad67;
+  font-size: 32px;
+}
+
+.card::before {
+  top: 18px;
+  left: 22px;
+}
+
+.card::after {
+  bottom: 18px;
+  right: 22px;
+}
+
+.small {
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #d9b978;
+  margin-bottom: 20px;
+}
+
+.invite {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(58px, 10vw, 100px);
+  line-height: 1;
+  color: #e2bd70;
+  margin: 18px 0;
+}
+
+.and {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: #f6e8cc;
+}
+
+.line {
+  width: 180px;
+  height: 1px;
+  background: #c9a15b;
+  margin: 25px auto;
+}
+
+.message {
+  max-width: 620px;
+  margin: auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ead9ba;
+}
+
+.date {
+  margin-top: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  color: #e2bd70;
+}
+
+.time {
+  margin-top: 8px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #f1dfbf;
+}
+
+.details {
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #c9a15b;
+  margin-bottom: 10px;
+}
+
+.venue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #f5e5c5;
+}
+
+.address {
+  max-width: 500px;
+  margin: 8px auto 0;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #d8c5a5;
+}
+
+.flower {
+  font-size: 25px;
+  color: #d5ad67;
+  margin: 28px 0;
+}
+
+.footer {
+  margin-top: 35px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #d8c5a5;
+}
+
+.scroll {
+  margin-top: 25px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #bfa06a;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 45px 20px;
+  }
+
+  .names {
+    font-size: 62px;
+  }
+
+  .message {
+    font-size: 18px;
+  }
+
+  .venue {
+    font-size: 26px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div id="welcome" class="welcome">
-    <div class="welcome-card">
-      <div class="mini-flower">✿</div>
-      <p class="eyebrow">YOU ARE CORDIALLY INVITED</p>
-      <h1>Prasanna <span>&amp;</span> Vinisha</h1>
-      <p class="welcome-date">13 · 09 · 2026</p>
-      <button id="openBtn" class="gold-btn">Open Invitation</button>
+
+<section class="hero">
+  <div class="card">
+
+    <div class="small">YOU ARE CORDIALLY INVITED</div>
+
+    <div class="invite">
+      To celebrate the wedding of
     </div>
+
+    <div class="names">
+      Prasanna
+      <div class="and">&</div>
+      Vinisha
+    </div>
+
+    <div class="line"></div>
+
+    <div class="message">
+      Together with their families,<br>
+      we joyfully invite you to be a part of their
+      beautiful beginning and bless their journey of love.
+    </div>
+
+    <div class="flower">❦ ✦ ❦</div>
+
+    <div class="date">
+      13 · SEPTEMBER · 2026
+    </div>
+
+    <div class="time">
+      10:35 AM — 11:55 AM
+    </div>
+
+    <div class="details">
+      <div class="title">THE VENUE</div>
+
+      <div class="venue">
+        Vijaya Pandiyan Mahal
+      </div>
+
+      <div class="address">
+        Cumbum Main Road,<br>
+        Opp. to Ponnusaamy Theatre,<br>
+        Chinnamanur
+      </div>
+    </div>
+
+    <div class="flower">✦</div>
+
+    <div class="footer">
+      A day made beautiful by love,<br>
+      a lifetime made meaningful together.
+    </div>
+
+    <div class="scroll">
+      WITH LOVE • PRASANNA & VINISHA
+    </div>
+
   </div>
+</section>
 
-  <header class="hero" id="home">
-    <div class="ornament">❦</div>
-    <p class="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
-    <p class="script small-script">We joyfully invite you to celebrate</p>
-    <h1>Prasanna <span>&amp;</span> Vinisha</h1>
-    <p class="hero-line">Two souls, one heart, one beautiful beginning.</p>
-    <div class="hero-date">
-      <div><b>13</b><span>SEPTEMBER</span></div>
-      <i></i>
-      <div><b>10:35 AM</b><span>TO 11:55 AM</span></div>
-    </div>
-    <div class="scroll">SCROLL TO EXPLORE <span>↓</span></div>
-  </header>
-
-  <main>
-    <section class="section intro-section">
-      <p class="eyebrow">THE BEGINNING OF FOREVER</p>
-      <h2>A day made beautiful by love</h2>
-      <p class="lead">With hearts full of happiness, we invite you to be a part of our special day and bless us as we begin our forever together.</p>
-      <div class="rings">♡ &nbsp; ♡</div>
-    </section>
-
-    <section class="section couple-section">
-      <div class="couple-card">
-        <div class="portrait-side">
-          <div class="monogram">P<span>♥</span>V</div>
-        </div>
-        <div class="couple-copy">
-          <p class="eyebrow">THE COUPLE</p>
-          <h2><span>Prasanna</span><small>and</small><span>Vinisha</span></h2>
-          <p>“Together is a beautiful place to be.”</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section details-section">
-      <p class="eyebrow">SAVE THE DATE</p>
-      <h2>Our Wedding Day</h2>
-      <div class="details-grid">
-        <article class="detail">
-          <div class="icon">♡</div>
-          <h3>Date</h3>
-          <p>Sunday<br><strong>September 13, 2026</strong></p>
-        </article>
-        <article class="detail">
-          <div class="icon">◷</div>
-          <h3>Time</h3>
-          <p><strong>10:35 AM – 11:55 AM</strong></p>
-        </article>
-        <article class="detail">
-          <div class="icon">⌖</div>
-          <h3>Venue</h3>
-          <p><strong>Vijaya Pandiyan Mahal</strong><br>Cumbum Main Road,<br>Opp. Ponnusaamy Theatre,<br>Chinnamanur</p>
-        </article>
-      </div>
-      <a class="gold-btn inline-btn" target="_blank" rel="noopener"
-         href="https://www.google.com/maps/search/?api=1&query=Vijaya+Pandiyan+Mahal%2C+Chinnamanur">
-        Get Directions
-      </a>
-    </section>
-
-    <section class="section countdown-section">
-      <p class="eyebrow">COUNTING EVERY MOMENT</p>
-      <h2>Until our forever begins</h2>
-      <div class="countdown" id="countdown">
-        <div><b id="days">00</b><span>DAYS</span></div>
-        <div><b id="hours">00</b><span>HOURS</span></div>
-        <div><b id="minutes">00</b><span>MINUTES</span></div>
-        <div><b id="seconds">00</b><span>SECONDS</span></div>
-      </div>
-    </section>
-
-    <section class="section friends-section">
-      <div class="friends-card">
-        <p class="eyebrow">TO OUR DEAR FRIENDS</p>
-        <h2>We want you there!</h2>
-        <p>Our special day would be even more beautiful with you by our side. Come celebrate our love, laughter &amp; forever with us!</p>
-        <div class="promise">♡</div>
-      </div>
-    </section>
-
-    <section class="section invite-section">
-      <p class="eyebrow">A LITTLE PREVIEW</p>
-      <h2>Our Invitation</h2>
-      <img class="invitation-img" src="assets/invitation.png" alt="Prasanna and Vinisha wedding invitation">
-    </section>
-
-    <section class="section final-section">
-      <div class="ornament">❦</div>
-      <p class="script">And so, our forever begins…</p>
-      <h2>Prasanna <span>&amp;</span> Vinisha</h2>
-      <p>September 13, 2026 · Chinnamanur</p>
-      <button id="musicBtn" class="outline-btn">♪ Play Kalyana Melam</button>
-    </section>
-  </main>
-
-  <footer>Made with love for Prasanna &amp; Vinisha ♥</footer>
-  <script src="script.js"></script>
 </body>
 </html>

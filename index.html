@@ -20,22 +20,31 @@
     }
 
     body {
-      background: #f3dfe2;
       color: #5a3b40;
       font-family: 'Montserrat', sans-serif;
       text-align: center;
+      background: #f3dfe2;
     }
 
     .hero {
       min-height: 100vh;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 30px 20px;
 
-     background:
-  linear-gradient(rgba(255,255,255,0.28), rgba(255,255,255,0.28)),
-  url('/Couple.png') center center / cover no-repeat fixed;
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.35),
+          rgba(255, 255, 255, 0.35)
+        ),
+        url("Couple.png");
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     .card {
@@ -46,13 +55,10 @@
       border: 1px solid #c9a46c;
       position: relative;
 
-      background:
-        linear-gradient(
-          rgba(255, 246, 242, 0.94),
-          rgba(250, 232, 231, 0.97)
-        );
+      background: rgba(255, 246, 242, 0.88);
 
       box-shadow: 0 0 45px rgba(181, 139, 91, 0.25);
+      backdrop-filter: blur(2px);
     }
 
     .card::before,
@@ -206,8 +212,15 @@
     }
 
     @media (max-width: 600px) {
+
+      .hero {
+        padding: 20px 12px;
+        background-attachment: scroll;
+      }
+
       .card {
         padding: 45px 20px;
+        background: rgba(255, 246, 242, 0.84);
       }
 
       .names {
@@ -233,9 +246,12 @@
   </audio>
 
   <section class="hero">
+
     <div class="card">
 
-      <div class="small">YOU ARE CORDIALLY INVITED</div>
+      <div class="small">
+        YOU ARE CORDIALLY INVITED
+      </div>
 
       <div class="invite">
         To celebrate the wedding of
@@ -255,7 +271,9 @@
         beautiful beginning and bless their journey of love.
       </div>
 
-      <div class="flower">❦ ✦ ❦</div>
+      <div class="flower">
+        ❦ ✦ ❦
+      </div>
 
       <div class="date">
         13 · SEPTEMBER · 2026
@@ -267,7 +285,10 @@
 
       <!-- Venue -->
       <div class="details">
-        <div class="title">THE VENUE</div>
+
+        <div class="title">
+          THE VENUE
+        </div>
 
         <div class="venue">
           Vijaya Pandiyan Mahal
@@ -287,16 +308,24 @@
           rel="noopener noreferrer">
           📍 Get Directions
         </a>
+
       </div>
 
-      <div class="flower">✦</div>
+      <div class="flower">
+        ✦
+      </div>
 
       <!-- Music Buttons -->
-      <button onclick="playWeddingMusic()" class="music-btn">
+
+      <button
+        onclick="playWeddingMusic()"
+        class="music-btn">
         ▶ Play Kalyana Melam
       </button>
 
-      <button onclick="stopWeddingMusic()" class="music-btn">
+      <button
+        onclick="stopWeddingMusic()"
+        class="music-btn">
         ⏹ Stop
       </button>
 
@@ -310,25 +339,36 @@
       </div>
 
     </div>
+
   </section>
 
   <script>
+
     function playWeddingMusic() {
-      const music = document.getElementById("weddingMusic");
+
+      const music =
+        document.getElementById("weddingMusic");
 
       music.play().catch((error) => {
-        console.log("Music could not play:", error);
+        console.log(
+          "Music could not play:",
+          error
+        );
       });
+
     }
 
     function stopWeddingMusic() {
-      const music = document.getElementById("weddingMusic");
+
+      const music =
+        document.getElementById("weddingMusic");
 
       music.pause();
       music.currentTime = 0;
+
     }
+
   </script>
 
 </body>
 </html>
-```
